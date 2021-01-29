@@ -2,6 +2,7 @@ export const projects = [
     {
         name: "Name",
         description: "This is a description",
+        topics: ['front-end: HTML, CSS, JS', 'backend: flask, python'],
         link: "link"
     },
     {

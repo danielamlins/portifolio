@@ -1,15 +1,22 @@
 import { projects } from "../Data/projects_list";
-import './content.scss';
-
+import "./content.scss";
 
 function Projects() {
   const mappedProjects = projects.map((proj) => {
-    return <li key={proj.name}>{proj.name}</li>;
+    return (
+      <li className="project">
+        <a key={proj.name} href="#">
+          <h4 className="project-name">{proj.name}</h4>
+          <p className="project-content">{proj.description}</p>
+          {proj.topics && <ul>{proj.topics.map(el => <li>{el}</li>)}</ul>}
+        </a>
+      </li>
+    );
   });
   return (
     <div>
       <h1>Projects</h1>
-      <ul key="projectList">{mappedProjects}</ul>
+      <ul className="projects" key="projectList">{mappedProjects}</ul>
     </div>
   );
 }
