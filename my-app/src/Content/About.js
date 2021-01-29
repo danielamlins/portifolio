@@ -1,3 +1,5 @@
+import './content.scss';
+
 function About() {
     return(
         <div>

@@ -1,5 +1,5 @@
 import { technologies } from "../Data/technologies";
-import './tech.css';
+import './content.scss';
 
 function Tech() {
   const list = technologies.map((tech) => {
@@ -12,10 +12,10 @@ function Tech() {
       </li>
     );
   });
-  console.log(list);
+
   return (
     <div>
-      <h3>Technologies</h3>
+      <h1>Technologies</h1>
       <ul className="technologies">{list}</ul>
     </div>
   );

@@ -1,4 +1,4 @@
-import './Hero.css'
+import './hero.scss'
 function Hero() {
     return (
         <div id="hero">Hero</div>

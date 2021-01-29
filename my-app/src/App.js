@@ -18,7 +18,7 @@ class App extends React.Component {
             <div className="side-menu">
               <Sidemenu />
             </div>
-            <div>
+            <div className="content">
               <Route path="/" exact component={About} />
               <Route path="/tech" component={Tech} />
               <Route path="/projects" exact component={Projects} />

@@ -1,9 +1,11 @@
+@import "../UtilStyles/_colors.scss";
+
 #hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30rem;
+    height: 20rem;
     width: 100vw;
-    background-color: #3891a6;
+    background-color: $black ;
     color: #E5E5E5;
 }
