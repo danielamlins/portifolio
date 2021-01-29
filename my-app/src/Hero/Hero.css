@@ -1,0 +1,9 @@
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    width: 100vw;
+    background-color: #3891a6;
+    color: #E5E5E5;
+}

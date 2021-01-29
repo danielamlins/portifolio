@@ -1,0 +1,22 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.side-menu {
+  margin-right: 2em;
+  padding: 1em;
+}
+
+.content {
+  width: 100%;
+  padding: 1em;
+}

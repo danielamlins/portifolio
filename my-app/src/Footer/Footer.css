@@ -1,0 +1,19 @@
+#footer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 3rem;
+  background-color: #3891a6;
+  color: #e5e5e5;
+}
+
+#footer a {
+  margin: auto 0;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #358ea0;
+}
+
+#footer a:hover,
+#footer a:active, 
+#footer a:visited {
+  color:#173f47;
+}
