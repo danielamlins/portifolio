@@ -1,0 +1,94 @@
+@import "../UtilStyles/_colors.scss";
+@import "../UtilStyles/_mixins.scss";
+
+.content {
+  margin-left: 3rem;
+  h2 {
+    text-align: center;
+
+    padding: 0;
+    font-size: 2.4rem;
+    transform: translate(-10%);
+    &:first-child {
+      margin: 0 0 3rem 0;
+    }
+  }
+
+  //Tech
+  ul.technologies {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+      padding: 10px;
+      height: 6rem;
+      width: 6rem;
+      box-shadow: 1px 2px 3px 2px rgb(199, 198, 198);
+      background-color: #f0f0f0;
+    }
+
+    h5 {
+      margin: 15px 0;
+    }
+  }
+
+  // Curriculum
+  ul.CV {
+    display: flex;
+    justify-content: center;
+    transform: translate(-10%);
+    margin: 2rem 0 0 0;
+
+    li.curriculum {
+      margin: 2rem;
+      list-style-type: none;
+      a {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        @include anchor_blue;
+        img {
+          width: 200px;
+          height: 200px;
+          border: 1px solid $blue;
+        }
+      }
+    }
+  }
+  // Projects
+  .projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .project {
+      margin: 1rem;
+      padding: 1.2rem;
+      list-style-type: none;
+      border: 1px solid $blue;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px 0px $blue;
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+      h4 {
+        margin-top: 0;
+        color: $blue;
+      }
+
+      &:hover {
+        background-color: lighten($blue, 60%);
+        transition: 0.5s;
+      }
+    }
+  }
+}
