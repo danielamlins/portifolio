@@ -15,10 +15,10 @@ function Sidemenu(props) {
       <Link className="menu-link" to="/projects">
         <span className="hover hover-center"> Projects </span>
       </Link>
-      <Link className="menu-link" to="/projects">
+      <Link className="menu-link" to="/curriculum">
         <span className="hover hover-center"> Curriculum </span>
       </Link>
-      <Link className="menu-link" to="/projects">
+      <Link className="menu-link" to="/curriculum">
         <span className="hover hover-center"> Contact me </span>
       </Link>
     </ul>

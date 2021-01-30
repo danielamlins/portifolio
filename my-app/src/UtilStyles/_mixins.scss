@@ -1,0 +1,17 @@
+@mixin anchor_purple {
+    &:link,
+    &:active,
+    &:visited,
+    &:hover {
+      color: $purple;
+    }
+}
+
+@mixin anchor_blue {
+    &:link,
+    &:active,
+    &:visited,
+    &:hover {
+      color: $blue;
+    }
+}
