@@ -146,4 +146,4 @@ jobs:
         service_account_key: ${{ secrets.GCR_JSON_KEY }}
 
     - name: Deploy Docker image
-      run: gcloud run deploy portifolio --project zeta-bebop-186920 --image eu.gcr.io/zeta-bebop-186920/portifolio --region europe-west1 --platform managed
+      run: gcloud run deploy portifolio --service-account=cloud-run-adm@zeta-bebop-186920.iam.gserviceaccount.com --project zeta-bebop-186920 --image eu.gcr.io/zeta-bebop-186920/portifolio --region europe-west1 --platform managed
