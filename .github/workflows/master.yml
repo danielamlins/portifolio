@@ -138,12 +138,12 @@ jobs:
 #      run: |
 #        ls
 
-    - name: Login
-      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@master
       with:
-        GCP_PROJECT_ID: zeta-bebop-186920
-        service_account_email: cloud-run-adm@zeta-bebop-186920.iam.gserviceaccount.com
+        project_id: zeta-bebop-186920
         service_account_key: ${{ secrets.GCR_JSON_KEY }}
+        export_default_credentials: true
 
     - name: Deploy Docker image
       run: gcloud run deploy portifolio --service-account=cloud-run-adm@zeta-bebop-186920.iam.gserviceaccount.com --project zeta-bebop-186920 --image eu.gcr.io/zeta-bebop-186920/portifolio --region europe-west1 --platform managed
