@@ -24,8 +24,8 @@ jobs:
       uses: actions/checkout@v2
 
     -name: path set
-      run: |
-        export PATH=PATH:./node_modules/.bin
+     run: |
+       export PATH=PATH:./node_modules/.bin
 
     - name: Get dependencies
       run: |
