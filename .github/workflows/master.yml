@@ -23,6 +23,12 @@ jobs:
     - name: Check out code into directory
       uses: actions/checkout@v2
 
+
+    - name: path know
+      run: |
+        ls
+        pwd
+
     - name: path set
       run: |
         export PATH=PATH:./node_modules/.bin
@@ -34,6 +40,7 @@ jobs:
     - name: Clean cache
       run: |
         npm cache clean --force
+        rm -rf node_modules package-lock.json
 
     - name: Build bundle
       run: |
