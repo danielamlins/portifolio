@@ -23,9 +23,9 @@ jobs:
     - name: Check out code into directory
       uses: actions/checkout@v2
 
-    -name: path set
-     run: |
-       export PATH=PATH:./node_modules/.bin
+    - name: path set
+      run: |
+        export PATH=PATH:./node_modules/.bin
 
     - name: Get dependencies
       run: |
