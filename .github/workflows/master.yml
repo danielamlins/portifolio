@@ -42,9 +42,9 @@ jobs:
       run: |
         npm install
 
-    - name: Build bundle
-      run: |
-        npm run build
+#    - name: Build bundle
+#      run: |
+#        npm run build
 
   docker:
     name: Docker
