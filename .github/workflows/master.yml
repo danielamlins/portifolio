@@ -54,6 +54,7 @@ jobs:
     - name: Prepare
       id: prep
       run: |
+        echo ${{ secrets.SENDGRIDKEY }} >> sendgrid.txt
         IS_LATEST=false
         DOCKER_IMAGE=eu.gcr.io/zeta-bebop-186920/portifolio
         VERSION=edge

@@ -1,0 +1,28 @@
+@import "../UtilStyles/_colors.scss";
+@import "../UtilStyles/_mixins.scss";
+
+#burger {
+  padding: 5px 15px;
+  font-size: 20px;
+  background-color: $black;
+  color: $platinum;
+  border: none;
+  div {
+    width: 30px;
+    height: 8px;
+    border-bottom: 2px solid $platinum;
+  }
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+  padding: 5px 15px;
+  background-color: $black;
+  color: $platinum;
+  border: none;
+  a {
+    @include anchor_platinum;
+    padding: 2px;
+  }
+}

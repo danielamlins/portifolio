@@ -2,32 +2,46 @@
 @import "../UtilStyles/_mixins.scss";
 
 #contact {
-  #socialmedia {
-    display: flex;
-    justify-content: center;
-    a {
-      @include anchor_blue;
-      margin: 0 1rem;
-    }
-  }
-  h4 {
-    span {
-      color: $blue;
-      text-decoration: underline;
-    }
-  }
-  form {
-    display: flex;
-    flex-flow: column nowrap;
-    .button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .contact-container {
+    max-width: 700px;
+    margin-top: 4rem;
+
+    #socialmedia {
       display: flex;
       justify-content: center;
-      margin-top: 0.8rem;
-      button {
-        padding: 3px;
-        width: 25%;
-        border: 1px solid $blue;
-        border-radius: 5px;
+      transform: translate(-5%);
+      a {
+        @include anchor_blue;
+        margin: 0 1rem;
+        font-size: 2rem;
+      }
+    }
+    h4 {
+      span {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+    form {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 90%;
+      .button {
+        display: flex;
+        justify-content: center;
+        margin: 0.8rem 0;
+        button {
+          padding: 3px;
+          width: 25%;
+          border: 1px solid $blue;
+          border-radius: 5px;
+        }
       }
     }
   }
