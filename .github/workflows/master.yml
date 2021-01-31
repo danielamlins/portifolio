@@ -33,14 +33,14 @@ jobs:
       run: |
         export PATH=PATH:/__w/portifolio/portifolio/node_modules/.bin
 
-    - name: Get dependencies
-      run: |
-        npm install
-
     - name: Clean cache
       run: |
         npm cache clean --force
-        rm -rf node_modules package-lock.json
+        rm -rf node_modules package-lock.json yarn.lock
+
+    - name: Get dependencies
+      run: |
+        npm install
 
     - name: Build bundle
       run: |
