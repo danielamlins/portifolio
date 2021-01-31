@@ -31,7 +31,7 @@ jobs:
 
     - name: path set
       run: |
-        export PATH=PATH:./node_modules/.bin
+        export PATH=PATH:/__w/portifolio/portifolio/node_modules/.bin
 
     - name: Get dependencies
       run: |
