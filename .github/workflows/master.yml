@@ -26,9 +26,11 @@ jobs:
     -name: path set
       run: |
         export PATH=PATH:./node_modules/.bin
+
     - name: Get dependencies
       run: |
         npm install --silent
+
     - name: Build bundle
       run: |
         npm run build
