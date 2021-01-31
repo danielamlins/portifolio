@@ -1,5 +1,5 @@
 import { projects } from "../Data/projects_list";
-import "./content.scss";
+import "./projects.scss";
 
 function Projects() {
   const mappedProjects = projects.map((proj) => {
@@ -15,7 +15,7 @@ function Projects() {
   });
   return (
     <div>
-      <h1>Projects</h1>
+      <h2>Projects</h2>
       <ul className="projects" key="projectList">{mappedProjects}</ul>
     </div>
   );

@@ -1,5 +1,6 @@
 import { technologies } from "../Data/technologies";
-import "./content.scss";
+import "./tech.scss";
+
 
 function Tech() {
   let CVEn = require("../Data/LinsAraujoCV_En.png");

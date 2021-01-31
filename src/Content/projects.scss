@@ -1,0 +1,29 @@
+@import "../UtilStyles/_colors.scss";
+
+.projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  .project {
+    margin: 1rem;
+    padding: 1.2rem;
+    transform: translate(-25%);
+    list-style-type: none;
+    border: 1px solid $blue;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 0px $blue;
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+    h4 {
+      margin-top: 0;
+      color: $blue;
+    }
+
+    &:hover {
+      background-color: lighten($blue, 60%);
+      transition: 0.5s;
+    }
+  }
+}

@@ -1,8 +1,57 @@
-import { React } from "react";
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import React, { useState } from "react";
+import {
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+  FaGlassMartiniAlt,
+} from "react-icons/fa";
 import "./contact.scss";
 
 function Contact() {
+  const [email, setEmail] = useState();
+  const [subject, setSubject] = useState();
+  const [message, setMessage] = useState();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const sgMail = require("@sendgrid/mail");
+    sgMail.setApiKey("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");
+    const msg = {
+      to: "danielamlins@gmail.com", // Change to your recipient
+      from: email, // Change to your verified sender
+      subject: subject,
+      text: message,
+      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+    };
+
+    const msgConfirmation = {
+      to: email, // Change to your recipient
+      from: "contact@danielalins.com", // Change to your verified sender
+      subject: "Thank you for the message",
+      text: "Thank you for the contact. We have received your message and will answer as soon as possible.",
+      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+    };
+
+    console.log(sgMail)
+    sgMail
+      .send(msg)
+      .then(() => {
+        console.log("Email sent");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+      console.log(sgMail)
+    sgMail
+      .send(msgConfirmation)
+      .then(() => {
+        console.log("Confirmation email sent");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div id="contact">
       <div id="socialmedia">
@@ -24,17 +73,34 @@ function Contact() {
         Follow me on my social networks, use the form below or write to{" "}
         <span className="email">danielamlins@gmail.com</span>
       </h4>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="email">E-mail *</label>
-        <input type="email" id="email"></input>
+        <input
+          type="email"
+          id="email"
+          required
+          onChange={(e) => setEmail(e.target.value)}
+        ></input>
 
         <label htmlFor="subject">Subject *</label>
-        <input type="text" id="subject"></input>
+        <input
+          type="text"
+          id="subject"
+          required
+          required
+          onChange={(e) => setSubject(e.target.value)}
+        ></input>
 
         <label htmlFor="message">Message *</label>
-        <textarea id="message" rows="5"></textarea>
+        <textarea
+          id="message"
+          rows="5"
+          required
+          required
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
         <div className="button">
-          <button>Send</button>
+          <button type="submit">Send</button>
         </div>
       </form>
     </div>
