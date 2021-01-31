@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  portifolio:
+    container_name: portifolio
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3030:3030
+    environment: 
+      - PORT=3030
+
