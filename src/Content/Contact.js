@@ -15,9 +15,7 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const sgMail = require("@sendgrid/mail");
-    sgMail.setApiKey(
-      "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"
-    );
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
       to: "danielamlins@gmail.com", // Change to your recipient
       from: email, // Change to your verified sender
