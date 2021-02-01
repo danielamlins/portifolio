@@ -12,8 +12,6 @@ function Contact() {
   const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
 
-  const axios = require("axios");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     let body = {
@@ -21,8 +19,16 @@ function Contact() {
       subject: subject,
       message: message,
     };
-    axios
-      .post("https://email.danielalins.com/email", body)
+    fetch("https://email.danielalins.com/email", {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    })
       .then((res) => res.JSON())
       .then((data) => {
         console.log(data);
