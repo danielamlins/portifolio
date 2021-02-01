@@ -11,17 +11,28 @@ function Contact() {
   const [email, setEmail] = useState();
   const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
-  
-  const axios = require('axios');
+
+  const axios = require("axios");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     let body = {
       email: email,
       subject: subject,
-      message: message
-    }
-    axios.post('https://email.danielalins.com/email', body).then(res => res.JSON()).then(data => console.log(data));
+      message: message,
+    };
+    axios
+      .post("https://email.danielalins.com/email", body)
+      .then((res) => res.JSON())
+      .then((data) => {
+        console.log(data);
+        if (data[0] === "" && data[1] === "") {
+          alert("Than you. Email sent");
+        } else {
+          alert("Error. Please, try again!");
+        }
+      })
+      .catch(() => alert("Error. Please, try again!"));
   };
   return (
     <div id="contact">
