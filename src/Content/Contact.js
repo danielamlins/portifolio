@@ -21,7 +21,7 @@ function Contact() {
     };
     fetch("https://email.danielalins.com/email", {
       method: "POST",
-      mode: "cors",
+      mode: "no-cors",
       cache: "no-cache",
       credentials: "same-origin",
       headers: {
