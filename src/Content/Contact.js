@@ -21,7 +21,7 @@ function Contact() {
     };
     fetch("https://email.danielalins.com/email", {
       method: "POST",
-      mode: "no-cors",
+      mode: "cors",
       cache: "no-cache",
       credentials: "same-origin",
       headers: {
@@ -37,9 +37,10 @@ function Contact() {
           alert("Than you. Email sent");
         } else {
           alert("Error. Please, try again!");
+          console.log(data);
         }
       })
-      .catch(() => alert("Error. Please, try again!"));
+      .catch((e) => {alert("Error. Please, try again!"); console.log(e)});
   };
   return (
     <div id="contact">
