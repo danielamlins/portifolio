@@ -2,9 +2,11 @@
     text-decoration: none;
     &:link,
     &:active,
-    &:visited,
-    &:hover {
+    &:visited {
       color: $purple;
+    }
+    &:hover {
+      color: darken($purple, 20%);
     }
 }
 
@@ -26,5 +28,17 @@
     &:visited,
     &:hover {
       color: $platinum;
+    }
+}
+
+@mixin anchor_lightblue{
+    text-decoration: none;
+    &:link,
+    &:active,
+    &:visited {
+      color: $lightblue;
+    }
+    &:hover {
+      color: $blue;
     }
 }

@@ -1,4 +1,6 @@
 @import "../UtilStyles/_colors.scss";
+@import "../UtilStyles/_mixins.scss";
+
 
 #footer {
   display: flex;
@@ -10,12 +12,9 @@
   a {
     margin: auto 0;
     text-decoration: none;
-    text-shadow: 1px 1px 4px $platinum;
-    &:hover,
-    &:active,
-    &:link,
-    &:visited {
-      color: $platinum;
+    @include anchor_platinum;
+    &:hover{
+      text-shadow: 1px 1px 3px $platinum;
     }
   }
 }

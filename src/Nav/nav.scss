@@ -2,7 +2,7 @@
 @import "../UtilStyles/_mixins.scss";
 
 #burger {
-  padding: 5px 15px;
+  padding: 15px;
   font-size: 20px;
   background-color: $black;
   color: $platinum;
@@ -15,14 +15,20 @@
 }
 
 #menu {
-    display: flex;
-    flex-direction: column;
-  padding: 5px 15px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 21vh;
+  width: 100%;
+  padding: 20px;
   background-color: $black;
   color: $platinum;
   border: none;
+  opacity: 0.8;
   a {
     @include anchor_platinum;
-    padding: 2px;
+    padding: 8px;
+    font-size: 18px;
+
   }
 }

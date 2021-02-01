@@ -5,7 +5,7 @@ function Projects() {
   const mappedProjects = projects.map((proj) => {
     return (
       <li className="project">
-        <a key={proj.name} href="#">
+        <a key={proj.name} href={proj.link} target="_blank">
           <h4 className="project-name">{proj.name}</h4>
           <p className="project-content">{proj.description}</p>
           {proj.topics && <ul>{proj.topics.map(el => <li>{el}</li>)}</ul>}

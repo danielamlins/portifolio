@@ -15,9 +15,9 @@
     #socialmedia {
       display: flex;
       justify-content: center;
-      transform: translate(-5%);
+      padding: 0;
       a {
-        @include anchor_blue;
+        @include anchor_lightblue;
         margin: 0 1rem;
         font-size: 2rem;
       }
@@ -31,16 +31,34 @@
     form {
       display: flex;
       flex-flow: column nowrap;
-      width: 90%;
+      label {
+        margin: 8px 0;
+      }
+      input, textarea {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 20px;
+        border: 1px solid $lightblue;
+        border-radius: 5px;
+      }
       .button {
         display: flex;
         justify-content: center;
         margin: 0.8rem 0;
         button {
-          padding: 3px;
-          width: 25%;
+          padding:8px 3px;
+          width: 15%;
           border: 1px solid $blue;
           border-radius: 5px;
+
+          &:hover {
+            background-color: white;
+            box-shadow: -1px 0 1px 1px $blue;
+          }
+          &:active {
+            background-color: white;
+            box-shadow: inset -1px 0 1px 1px $blue;
+          }
         }
       }
     }

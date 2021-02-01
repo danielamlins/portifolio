@@ -32,22 +32,29 @@ export const Burger = ({ open, setOpen }) => {
 };
 
 export const Menu = ({ open, setOpen }) => {
-  const [show, setShow] = useState(open);
+  const handleClick = () => {
+    setOpen(!open);
+  }
+
   if (!open) {
     return null;
   }
   return (
     <div id="menu">
-      <Link className="" to="/">
+      <Link
+        className=""
+        to="/"
+        onClick={handleClick}
+      >
         About
       </Link>
-      <Link className="" to="/tech">
+      <Link className="" to="/tech"  onClick={handleClick}>
         Tech and CV
       </Link>
-      <Link className="" to="/projects">
+      <Link className="" to="/projects"  onClick={handleClick}>
         Projects
       </Link>
-      <Link className="" to="/curriculum">
+      <Link className="" to="/curriculum"  onClick={handleClick}>
         Contact me
       </Link>
     </div>
