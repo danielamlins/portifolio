@@ -22,7 +22,7 @@ export const projects = [
     description:
       "Basic Calculator created with JavaScript as a personal project.",
     topics: ["Front-end: HTML, CSS, JavaScript"],
-    link: "link",
+    link: "https://danielamlins.github.io/basic_calculator/",
   },
   {
     name: "Try to Budget",
@@ -32,3 +32,4 @@ export const projects = [
     link: "https://github.com/danielamlins/Finalprojectcs50",
   },
 ];
+
