@@ -54,7 +54,7 @@ export const Menu = ({ open, setOpen }) => {
       <Link className="" to="/projects"  onClick={handleClick}>
         Projects
       </Link>
-      <Link className="" to="/curriculum"  onClick={handleClick}>
+      <Link className="" to="/contact"  onClick={handleClick}>
         Contact me
       </Link>
     </div>

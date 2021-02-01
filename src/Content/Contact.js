@@ -11,47 +11,17 @@ function Contact() {
   const [email, setEmail] = useState();
   const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
+  
+  const axios = require('axios');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const sgMail = require("@sendgrid/mail");
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    const msg = {
-      to: "danielamlins@gmail.com", // Change to your recipient
-      from: email, // Change to your verified sender
+    let body = {
+      email: email,
       subject: subject,
-      text: message,
-      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-    };
-
-    const msgConfirmation = {
-      to: email, // Change to your recipient
-      from: "contact@danielalins.com", // Change to your verified sender
-      subject: "Thank you for the message",
-      text:
-        "Thank you for the contact. We have received your message and will answer as soon as possible.",
-      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-    };
-
-    console.log(sgMail);
-    sgMail
-      .send(msg)
-      .then(() => {
-        console.log("Email sent");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-    console.log(sgMail);
-    sgMail
-      .send(msgConfirmation)
-      .then(() => {
-        console.log("Confirmation email sent");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+      message: message
+    }
+    axios.post('https://email.danielalins.com/email', body).then(res => res.JSON()).then(data => console.log(data));
   };
   return (
     <div id="contact">

@@ -31,7 +31,7 @@ function App() {
             <Route path="/" exact component={About} />
             <Route path="/tech" component={Tech} />
             <Route path="/projects" exact component={Projects} />
-            <Route path="/curriculum" exact component={Contact} />
+            <Route path="/contact" exact component={Contact} />
           </div>
         </div>
         <Footer />
