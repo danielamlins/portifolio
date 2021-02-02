@@ -3,7 +3,6 @@ import {
   FaTwitter,
   FaLinkedin,
   FaGithub,
-  FaGlassMartiniAlt,
 } from "react-icons/fa";
 import "./contact.scss";
 
@@ -19,14 +18,13 @@ function Contact() {
       subject: subject,
       message: message,
     };
-    fetch("https://email.danielalins.com/email", {
+    fetch("https://emailgo.danielalins.com/email", {
       method: "POST",
       mode: "cors",
       cache: "no-cache",
       credentials: "same-origin",
       headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(body),
     })
@@ -40,7 +38,10 @@ function Contact() {
           console.log(data);
         }
       })
-      .catch((e) => {alert("Error. Please, try again!"); console.log(e)});
+      .catch((e) => {
+        alert("Error. Please, try again!");
+        console.log(e);
+      });
   };
   return (
     <div id="contact">
