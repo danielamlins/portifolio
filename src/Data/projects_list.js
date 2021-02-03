@@ -6,7 +6,7 @@ export const projects = [
     topics: [
       "Front-end: React",
       "Email integration: Sendgrid",
-      "Serverless with Docker and Cloud Run.",
+      "Serverless with Golang, Docker and Cloud Run.",
     ],
     link: "#",
   },
