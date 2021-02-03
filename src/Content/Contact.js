@@ -1,3 +1,4 @@
+import { send } from "@sendgrid/mail";
 import React, { useState } from "react";
 import {
   FaTwitter,
@@ -10,6 +11,7 @@ function Contact() {
   const [email, setEmail] = useState();
   const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
+  const [emailSent, setEmailSent] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,16 +32,10 @@ function Contact() {
     })
       .then((res) => res.JSON())
       .then((data) => {
-        console.log(data);
-        if (data[0] === "" && data[1] === "") {
-          alert("Than you. Email sent");
-        } else {
-          alert("Error. Please, try again!");
-          console.log(data);
-        }
+          setEmailSent('sent');
       })
       .catch((e) => {
-        alert("Error. Please, try again!");
+        setEmailSent('error');
         console.log(e);
       });
   };
@@ -92,6 +88,9 @@ function Contact() {
             required
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
+          {!emailSent ? null :
+          emailSent === 'sent' ? <div className="form-sent green">Thank you for your e-mail!</div> 
+          : <div className="form-sent red">Error! Please try again</div>}
           <div className="button">
             <button type="submit">Send</button>
           </div>
