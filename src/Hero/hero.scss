@@ -1,20 +1,38 @@
 @import "../UtilStyles/_colors.scss";
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 #hero {
-    display: flex;
-    align-items: center;
-    height: 22rem;
-    width: 100vw;
-    background-image: url('../logos/hero.jpg');
-    background-size: cover ;
-    background-color: $black ;
-    
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 22rem;
+  width: 100vw;
+  background-image: url("../logos/hero.jpg");
+  background-size: cover;
+  background-color: $black;
 
-    h1 {
-        width: 100%;
-        margin-left: 5rem;
-        font-family: 'Black Ops One', cursive;
-        color: rgb(46, 46, 46);
-        text-shadow: -1px 0px 2px white;
+  h1 {
+    width: 100%;
+    margin-left: 5rem;
+    font-family: "Black Ops One", cursive;
+    color: rgb(46, 46, 46);
+    text-shadow: -1px 0px 2px white;
+  }
+
+  #copyright {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: black;
+    font-size: 9px;
+    text-shadow: 1px 1px rgb(83, 83, 83);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #hero {
+    #copyright {
+      color: honeydew;
+      text-shadow: 1px 1px rgb(83, 83, 83);
     }
+  }
 }
