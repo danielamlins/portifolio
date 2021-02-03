@@ -8,7 +8,7 @@ export const projects = [
       "Email integration: Sendgrid",
       "Serverless with Golang, Docker and Cloud Run.",
     ],
-    link: "#",
+    link: "https://github.com/danielamlins/portifolio",
   },
   {
     name: "Business Card Website - Pet Sitter",
@@ -30,6 +30,13 @@ export const projects = [
       "Application that allows the user to organize financial information. FInal Project for the CS50 Introduction to Computer Science.",
     topics: ["Front-end: HTML, CSS, JavaScript", "Backend: Python, Flask"],
     link: "https://github.com/danielamlins/Finalprojectcs50",
+  },
+    {
+    name: "React Blog",
+    description:
+      "Blog Prototype where it is possible to create, view, edit and delete posts. Written as a React exercise.",
+    topics: ["Front-end: React, Bootstrap"],
+    link: "https://danielamlins.github.io/react_blog/",
   },
 ];
 
