@@ -1,15 +1,11 @@
 @import "../UtilStyles/_colors.scss";
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 #hero {
-  position: relative;
   display: flex;
   align-items: center;
-  height: 22rem;
-  width: 100vw;
   background-image: url("../logos/hero.jpg");
   background-size: cover;
   background-color: $black;
-  z-index: 0;
 
   h1 {
     width: 100%;

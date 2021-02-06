@@ -9,10 +9,10 @@ function Sidemenu(props) {
       <h1>WebDev</h1>
       
       <Link className="menu-link" to="/">
-        <span className="hover hover-center"> About </span>
+        <span className="hover hover-center">About </span>
       </Link>
       <Link className="menu-link" to="/tech">
-        <span className="hover hover-center"> Technologies / Curriculum </span>
+        <span className="hover hover-center">Technologies / Curriculum </span>
       </Link>
       <Link className="menu-link" to="/projects">
         <span className="hover hover-center"> Projects </span>

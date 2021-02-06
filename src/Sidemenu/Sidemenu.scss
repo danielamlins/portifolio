@@ -6,8 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin: 2rem 1rem;
-  padding: 1vw;
   width: 25%;
   height: 100%;
   list-style-type: none;
@@ -15,7 +13,7 @@
 
   h1 {
     font-family: 'Eagle Lake', cursive;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     margin-top: 0;
     border-bottom: 2px solid $purple;
   }
@@ -24,14 +22,13 @@
     flex-flow: row nowrap;
     margin: 0 0 30px 10px;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: "Raleway", sans-serif;
     color: $purple;
 
     @include anchor_purple;
     // Animation
     .hover {
-      text-align: center;
       margin: 0 auto;
       padding: 0;
       transition: all 0.2s ease-in-out;
@@ -72,52 +69,6 @@
           }
         }
       }
-    }
-  }
-}
-
-@media screen and (max-height: 750px) {
-  .side-menu {
-    margin: 0 0.3em;
-    h1 {
-      margin: 1em 0 ;
-    }
-    .menu-link {
-      font-size: 1.3em;
-    }
-  }
-}
-
-@media screen and (max-height: 620px) {
-  .side-menu {
-    .menu-link {
-      font-size: 0.9em;
-    }
-  }
-}
-
-@media screen and (max-height: 580px) {
-  .side-menu {
-    h1 {
-      font-size: 1.3rem;
-    }
-    .menu-link {
-      margin: 0 0 10px 10px;
-      font-size: 0.7em;
-    }
-  }
-}
-
-@media screen and (max-height: 420px) {
-  .side-menu {
-      overflow: scroll;
-      width: 35%;
-    h1 {
-      font-size: 1.3rem;
-    }
-    .menu-link {
-      margin: 0 0 10px 10px;
-      font-size: 0.7em;
     }
   }
 }
