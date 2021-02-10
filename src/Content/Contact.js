@@ -99,7 +99,7 @@ function Contact() {
             <div className="form-sent red">Error! Please try again</div>
           ) : null}
           <div className="button" >
-            <button type="submit" disabled={btnDisabled}>Send</button>
+            <button type="submit" disabled={btnDisabled}>{btnDisabled ? "Sending" :  "Send"}</button>
           </div>
         </form>
       </div>
