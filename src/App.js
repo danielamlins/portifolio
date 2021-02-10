@@ -14,7 +14,7 @@ import { useMediaQuery } from "react-responsive";
 
 function App() {
   const [open, setOpen] = useState(false);
-  const isMobile = useMediaQuery({ query: "(max-width: 720px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
   return (
     <BrowserRouter>
