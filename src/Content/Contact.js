@@ -98,8 +98,8 @@ function Contact() {
           ) : emailSent === "error" ? (
             <div className="form-sent red">Error! Please try again</div>
           ) : null}
-          <div className="button" disabled={btnDisabled}>
-            <button type="submit">Send</button>
+          <div className="button" >
+            <button type="submit" disabled={btnDisabled}>Send</button>
           </div>
         </form>
       </div>
