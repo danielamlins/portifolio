@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import "./App.scss";
+import Metatags from './Meta/Metatags';
 import Hero from "./Hero/Hero";
 import  {Burger, Menu} from "./Nav/Nav";
 import Sidemenu from "./Sidemenu/Sidemenu";
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Metatags />
       <div className="container">
          {isMobile && <div><Burger open={open} setOpen={setOpen} /> <Menu open={open} setOpen={setOpen}/></div>}
         <Hero />
