@@ -8,8 +8,10 @@ function Contact() {
   const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
   const [emailSent, setEmailSent] = useState();
+  const [btnDisabled, setBtnDisabled] = useState(false);
 
   const handleSubmit = (e) => {
+    setBtnDisabled(true);
     e.preventDefault();
     let body = {
       email: email,
@@ -28,10 +30,15 @@ function Contact() {
     })
       .then((data) => {
         setEmailSent("sent");
+        setBtnDisabled(false);
+        setEmail('');
+        setSubject('');
+        setMessage('');
       })
       .catch((e) => {
         setEmailSent("error");
         console.log(e);
+        setBtnDisabled(false);
       });
   };
   return (
@@ -62,6 +69,7 @@ function Contact() {
           <input
             type="email"
             id="email"
+            value={email}
             required
             onChange={(e) => setEmail(e.target.value)}
           ></input>
@@ -70,7 +78,7 @@ function Contact() {
           <input
             type="text"
             id="subject"
-            required
+            value={subject}
             required
             onChange={(e) => setSubject(e.target.value)}
           ></input>
@@ -79,16 +87,18 @@ function Contact() {
           <textarea
             id="message"
             rows="5"
-            required
+            value={message}
             required
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           {emailSent === "sent" ? (
-            <div className="form-sent green">Email sent! Thank you for your e-mail!</div>
+            <div className="form-sent green">
+              Email sent! Thank you for your e-mail!
+            </div>
           ) : emailSent === "error" ? (
             <div className="form-sent red">Error! Please try again</div>
           ) : null}
-          <div className="button">
+          <div className="button" disabled={btnDisabled}>
             <button type="submit">Send</button>
           </div>
         </form>
