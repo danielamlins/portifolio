@@ -4,7 +4,7 @@ export const projects = [
     description:
       "Portifolio Website (the current one you're visiting) created as a personal project.",
     topics: [
-      "Front-end: React",
+      "Front-end: React and SASS",
       "Email integration: Sendgrid",
       "Serverless with Golang, Docker and Cloud Run.",
     ],
@@ -20,14 +20,14 @@ export const projects = [
   {
     name: "Calculator",
     description:
-      "Basic Calculator created with JavaScript as a personal project.",
+      "Basic Calculator with History created with JavaScript as a personal project. I",
     topics: ["Front-end: HTML, CSS, JavaScript"],
     link: "https://danielamlins.github.io/basic_calculator/",
   },
   {
     name: "Try to Budget",
     description:
-      "Application that allows the user to organize financial information. FInal Project for the CS50 Introduction to Computer Science.",
+      "Application that allows the user to organize financial information. Final Project for the CS50 Introduction to Computer Science.",
     topics: ["Front-end: HTML, CSS, JavaScript", "Backend: Python, Flask"],
     link: "https://github.com/danielamlins/Finalprojectcs50",
   },
