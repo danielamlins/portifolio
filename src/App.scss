@@ -1,14 +1,15 @@
 @import "./UtilStyles/_colors.scss";
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
 
+// Here I only style the position and size of the elements. For specific stylings of each element, see their specific sass file.
 .container {
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   background-color: $platinum;
   font-family: "DM Mono", monospace;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   #burger {
     position: fixed;
@@ -35,19 +36,12 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: start;
-
-    .side-menu {
-      position: absolute;
-      margin-right: 1rem 2em;
-      padding: 1vw;
-    }
-
     .content {
       height: calc(100% - 5rem);
       width: 100%;
       margin-top: 0;
-      padding: 2rem;
-      overflow-y: hidden;
+      padding: 2rem 0;
+      // overflow-y: hidden;
     }
   }
 
@@ -60,26 +54,28 @@
 // Width-based Media Query
 @media (min-width: 601px) {
   .container {
-    height: 100vh;
-    overflow-x: hidden;
+    // height: 100vh;
+    // overflow-x: hidden;
 
     #hero {
       position: relative;
-      height: 20rem;
+      height: 25rem;
       margin-top: 0;
     }
-    .main {
-      overflow-x: hidden;
-      .content {
-        width: 80%;
-        transform: translate(20%);
-        overflow-y: scroll;
+    // .main {
+    //   overflow-x: hidden;
+    //   .content {
+    //     width: 80%;
+    //     transform: translate(20%);
+    //     overflow-y: scroll;
 
-        div {
-          padding: 0 2rem;
-        }
-      }
-    }
+    //     div {
+    //       padding: 0 2rem;
+    //     }
+    //   }
+    // }
+
+
     #footer {
       height: 3rem;
     }
@@ -122,7 +118,7 @@
       }
       .content {
         transform: translate(-2%);
-        overflow-y: visible;
+        // overflow-y: visible;
       }
     }
   }

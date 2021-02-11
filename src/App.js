@@ -1,8 +1,8 @@
-import React, { useState} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./App.scss";
-import Metatags from './Meta/Metatags';
+import Metatags from "./Meta/Metatags";
 import Hero from "./Hero/Hero";
-import  {Burger, Menu} from "./Nav/Nav";
+import { Burger, Menu } from "./Nav/Nav";
 import Sidemenu from "./Sidemenu/Sidemenu";
 import Footer from "./Footer/Footer";
 import About from "./Content/About";
@@ -16,17 +16,21 @@ function App() {
   const [open, setOpen] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
+ 
   return (
     <BrowserRouter>
       <Metatags />
       <div className="container">
-         {isMobile && <div><Burger open={open} setOpen={setOpen} /> <Menu open={open} setOpen={setOpen}/></div>}
+        {isMobile && (
+          <div>
+            <Burger open={open} setOpen={setOpen} />{" "}
+            <Menu open={open} setOpen={setOpen} />
+          </div>
+        )}
         <Hero />
         <div className="main">
           {!isMobile ? (
-            <div className="side-menu">
-              <Sidemenu />
-            </div>
+                <Sidemenu />
           ) : null}
 
           <div className="content">
