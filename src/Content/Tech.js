@@ -7,7 +7,7 @@ function Tech() {
   let CVDe = require("../Data/LinsAraujoCV_De.png");
 
   const list = technologies.map((tech) => {
-    let sourceImg = require("../logos/" + tech.id + ".png");
+    let sourceImg = require("../Imgs/" + tech.id + ".png");
     console.log(sourceImg);
     return (
       <li key={tech.name}>

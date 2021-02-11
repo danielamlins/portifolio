@@ -3,7 +3,6 @@ import { Link, Router } from "react-router-dom";
 
 function Sidemenu(props) {
   console.log(props);
-  let underline = require("../logos/underline.png");
   return (
     <ul className="side-menu">
       <h1>WebDev</h1>
