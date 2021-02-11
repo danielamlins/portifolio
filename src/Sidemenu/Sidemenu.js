@@ -25,7 +25,7 @@ function Sidemenu(props) {
     <div className="side-menu">
       <div className={`sticky-wrapper${isSticky ? " sticky" : ""}`} ref={ref}>
         <ul>
-          <h1>WebDev</h1>
+            <h1 onClick={() => window.scrollTo(0, 0)}>WebDev</h1>
 
           <Link className="menu-link" to="/">
             <span className="hover hover-center">About </span>
