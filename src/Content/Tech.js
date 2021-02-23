@@ -25,14 +25,14 @@ function Tech() {
       <h2>CV</h2>
       <ul className="CV">
         <li className="curriculum">
-          <a href="https://bit.ly/3coQnrG" target="_blank">
+          <a href="https://cutt.ly/xlzffdu" target="_blank">
             <img src={CVEn.default} />
             <p>English Version</p>
           </a>
         </li>
 
         <li className="curriculum">
-          <a href="https://bit.ly/3coERfS" target="_blank">
+          <a href="https://cutt.ly/1lzfTQb" target="_blank">
             <img src={CVDe.default} />
             <p>German Version</p>
           </a>
