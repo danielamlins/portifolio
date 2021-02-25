@@ -22,6 +22,9 @@ ul.technologies {
       &:hover {
         background-color: #fdfcfc;
       }
+      img {
+        max-height: 50px;
+      }
     }
 
     h5 {

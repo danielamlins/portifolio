@@ -11,7 +11,7 @@ function Tech() {
     console.log(sourceImg);
     return (
       <li key={tech.name}>
-        <img width="50" src={sourceImg.default}></img>
+        <img width="50"  src={sourceImg.default}></img>
         <h5>{tech.name}</h5>
       </li>
     );
