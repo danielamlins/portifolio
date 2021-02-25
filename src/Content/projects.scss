@@ -10,6 +10,7 @@
     min-height: 200px;
     width: 30vw;
     margin: 2rem;
+    padding: 5px;
     list-style-type: none;
     border: 1px solid $blue;
     border-radius: 5px;
@@ -36,8 +37,7 @@
       color: $black;
     }
     img {
-      width: 98%;
-      margin: 5px;
+      width: 100%;
       border-radius: 5px;
       border: 1px solid $blue;
     }
