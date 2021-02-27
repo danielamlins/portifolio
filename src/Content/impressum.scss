@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import "../UtilStyles/_colors.scss";
+@import "../UtilStyles/_mixins.scss";
+
+#impressum {
+  padding: 1rem;
+  font-family: "Nunito", sans-serif;
+  h1 {
+    color: $purple;
+  }
+  h2 {
+    color: $blue;
+  }
+  h3 {
+      color: $metallic;
+  }
+
+  ol li {
+    margin: 10px;
+  }
+  a {
+    @include anchor_blue;
+  }
+}

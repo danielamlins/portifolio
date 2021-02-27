@@ -11,9 +11,10 @@
   background-color: $black;
 
   @media (max-width: 600px) {
-      background-position: bottom center;
-      background-attachment:scroll;
-    }
+    height: 40vh;
+    background-position: bottom center;
+    background-attachment: scroll;
+  }
   h1 {
     width: 100%;
     margin-left: 5rem;

@@ -31,9 +31,9 @@ function Contact() {
       .then((data) => {
         setEmailSent("sent");
         setBtnDisabled(false);
-        setEmail('');
-        setSubject('');
-        setMessage('');
+        setEmail("");
+        setSubject("");
+        setMessage("");
       })
       .catch((e) => {
         setEmailSent("error");
@@ -98,8 +98,20 @@ function Contact() {
           ) : emailSent === "error" ? (
             <div className="form-sent red">Error! Please try again</div>
           ) : null}
-          <div className="button" >
-            <button type="submit" disabled={btnDisabled}>{btnDisabled ? "Sending" :  "Send"}</button>
+
+          <label htmlFor="agree">
+            <input
+              type="checkbox"
+              id="agree"
+              required
+            />
+            I agree to <a href="/privacy">Privacy Policy</a>
+          </label>
+
+          <div className="button">
+            <button type="submit" disabled={btnDisabled}>
+              {btnDisabled ? "Sending" : "Send"}
+            </button>
           </div>
         </form>
       </div>

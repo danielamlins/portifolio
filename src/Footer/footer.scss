@@ -1,20 +1,43 @@
 @import "../UtilStyles/_colors.scss";
 @import "../UtilStyles/_mixins.scss";
 
-
 #footer {
   display: flex;
-  justify-content: space-evenly;
-  height: 5rem;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
   background-color: $black;
-  color: #e5e5e5;
 
-  a {
-    margin: auto 0;
-    text-decoration: none;
-    @include anchor_platinum;
-    &:hover{
-      text-shadow: 1px 1px 3px $platinum;
+  #links {
+    display: flex;
+    justify-content: space-evenly;
+    height: 5rem;
+    width: 80%;
+    color: #e5e5e5;
+    a {
+      margin: 1.5rem 0 0 0;
+      text-decoration: none;
+      @include anchor_platinum;
+      &:hover {
+        text-shadow: 1px 1px 3px $platinum;
+      }
+      @media screen and (max-width: 600px) {
+        margin: 1rem 0 0 0;
+      }
+    }
+  }
+
+  #privacy {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    a {
+      @include anchor_blue;
+      font-size: 14px;
+      margin-right: 30px;
     }
   }
 }

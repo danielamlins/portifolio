@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import "../UtilStyles/_mixins.scss";
+@import "../UtilStyles/_colors.scss";
+
+#privacy {
+  padding: 1rem;
+  font-family: "Nunito", sans-serif;
+  h1, h2{
+      color: $purple;
+  }
+
+  ol li {
+    margin: 10px;
+  }
+  a {
+    @include anchor_blue;
+  }
+}
